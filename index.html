@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <title>JS QUIZ</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTi - Quiz</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+
 </head>
-<body>
-  <div class="conteudo">
-      <h1 id="titulo">QUIZ DOS VALORES DA GTI</h1>
-     
-    <ul id="listaRespostas">
-      <li><input type="radio" name="resposta" value="0"><span></span></li>
+  <body>
+    <div id="conteudo" class="ajeita">
+      <h1 id="comeco" class="titulo" style="color: #e54ed0; text-shadow: 0px 0px 5px #9f45b0"> QUIZ DOS VALORES DA GTI</h1>
 
-      <li><input type="radio" name="resposta" value="1"><span></span></li>
+      <ul id="perguntas">
+        <li>
+          <input type="radio" name="resposta" value="0">
+            <span>
+            </span>
+        </li>
+        <li>
+          <input type="radio" name="resposta" value="1">
+            <span>
 
-      <li><input type="radio" name="resposta" value="2"><span></span></li>
+            </span>
+        </li>
+        <li>
+          <input type="radio" name="resposta" value="2">
+            <span>
 
-      <li><input type="radio" name="resposta" value="3"><span></span></li>
+            </span>
+        </li>
+        <li>
+          <input type="radio" name="resposta" value="3">
+            <span>
 
-    </ul>
-    
-    <div id="resultado"></div>
-      
-    <button id="confirmar" onclick="mostrarQuestao()">COMEÇAR</button>
-  </div>
-</body>
+            </span>
+        </li>
+
+      </ul>
+
+      <div id="resultado">
+
+      </div>
+      <button id="botao" class="button" onclick="questao()">COMEÇAR</button>
+    </div>
+  <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
