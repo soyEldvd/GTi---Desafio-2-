@@ -22,10 +22,10 @@ function questao(){
     document.getElementById("resultado").innerHTML = "";
     document.getElementById("perguntas").style.display = "block"; 
 
-    if(aux === -1 || input[0].checked != false || input[1].checked != false || input[2].checked != false || input[3].checked != false){
+    if(aux === -1 || bote[0].checked != false || bote[1].checked != false || bote[2].checked != false || bote[3].checked != false){
         if(aux != -1){
             for(var i =0; i < quiz[aux].options.length; i++){
-                pontos = pontos + input[i].checked * quiz[aux]['options'][i]['value'];
+                pontos = pontos + bote[i].checked * quiz[aux]['options'][i]['value'];
             }
         }
         document.getElementById("botao").innerHTML = "Próximo";
@@ -41,18 +41,18 @@ function questao(){
         document.getElementById("comeco").innerHTML = quiz[aux].title;
 
         for(var i = 0; i < quiz[aux].options.length; i++){
-            if(input.checked === true){
-                input[i].checked = false;
+            if(bote.checked === true){
+                bote[i].checked = false;
             }
             document.getElementsByTagName("span")[i].innerHTML = quiz[aux].options[i].answer
-            input[i].value = quiz[aux].options[i].value
+            bote[i].value = quiz[aux].options[i].value
         } 
     }
 
 
     else{
     console.log(quiz[aux - 1].options.length)
-    finalizarQuiz();
+    Resultado();
     }
 
 
